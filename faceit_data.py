@@ -611,7 +611,7 @@ class FaceitData:
             if game is None:
                 print("The game cannot be nothing!")
             else:
-                api_url = "{}/players/{}/history"
+                api_url = "{}/players/{}/history".format(self.base_url, player_id)
                 if from_timestamp is None:
                     if to_timestamp is None:
                         api_url += "?game={}&offset={}&limit={}".format(
