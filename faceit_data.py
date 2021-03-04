@@ -854,7 +854,7 @@ class FaceitData:
         if nickname is None:
             print("The nickname cannot be nothing!")
         else:
-            api_url = "{}/search/players?name={}&offset={}&limit={}".format(
+            api_url = "{}/search/players?nickname={}&offset={}&limit={}".format(
                 self.base_url, urllib.parse.quote_plus(nickname), starting_item_position, return_items)
 
             if game is not None:
