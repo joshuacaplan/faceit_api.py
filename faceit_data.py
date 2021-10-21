@@ -42,7 +42,7 @@ class FaceitData:
 
             res = requests.get(api_url, headers=self.headers)
 
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -64,7 +64,7 @@ class FaceitData:
                 self.base_url, championship_id, type_of_match, starting_item_position, return_items)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -84,7 +84,7 @@ class FaceitData:
                 self.base_url, championship_id, starting_item_position, return_items)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -102,7 +102,7 @@ class FaceitData:
             self.base_url, starting_item_position, return_items)
 
         res = requests.get(api_url, headers=self.headers)
-        if res.status_code is 200:
+        if res.status_code == 200:
             return json.loads(res.content.decode('utf-8'))
         else:
             return None
@@ -119,7 +119,7 @@ class FaceitData:
             api_url = "{}/games/{}".format(self.base_url, game_id)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -136,7 +136,7 @@ class FaceitData:
             api_url = "{}/games/{}/parent".format(self.base_url, game_id)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -225,7 +225,7 @@ class FaceitData:
                 self.base_url, hub_id, starting_item_position, return_items)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
@@ -245,7 +245,7 @@ class FaceitData:
                 self.base_url, hub_id, starting_item_position, return_items)
 
             res = requests.get(api_url, headers=self.headers)
-            if res.status_code is 200:
+            if res.status_code == 200:
                 return json.loads(res.content.decode('utf-8'))
             else:
                 return None
