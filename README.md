@@ -79,7 +79,7 @@ for k, v in match_details.items():
 
 ```python
 # This will return an item called items which the value is an array with even more objects in it
-all_games = faceit.data.all_faceit_games()
+all_games = faceit_data.all_faceit_games()
 
 # In order to access the first game inside of the items array: "tf2" we need to do something like this:
 
